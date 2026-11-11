@@ -2,6 +2,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net48;net10.0-windows</TargetFrameworks>
 		<UseWindowsForms>true</UseWindowsForms>
+		<RootNamespace>AdvancedWizardControl</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
 		<Folder Include="Enums" />
@@ -13,24 +14,8 @@
 		<Folder Include="WizardPages" />
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include="Enums\ButtonLayoutKind.cs" />
-		<Compile Include="Enums\Direction.cs" />
-		<Compile Include="EventArguments\WizardEventArgs.cs" />
-		<Compile Include="EventArguments\WizardPageChangedEventArgs.cs" />
-		<Compile Include="EventArguments\WizardPageEventArgs.cs" />
-		<None Include="Resources\AdvancedWizard.bmp" />
-		<None Include="Resources\wiz.gif" />
-		<Compile Include="Strategies\DesignTimeWizard.cs" />
-		<Compile Include="Strategies\RuntimeWizard.cs" />
-		<Compile Include="Strategies\WizardStrategy.cs" />
-		<Compile Include="Wizard\AdvancedWizard.cs" />
-		<Compile Include="Wizard\AdvancedWizard.Internal.cs" />
-		<Compile Include="Wizard\AdvancedWizard.Private.cs" />
-		<Compile Include="Wizard\AdvancedWizardCollectionEditor.cs" />
-		<Compile Include="Wizard\AdvancedWizardDesigner.cs" />
-		<Compile Include="Wizard\AdvancedWizardPageDesigner.cs" />
-		<Compile Include="WizardPages\AdvancedWizardPage.cs" />
-		<Compile Include="WizardPages\AdvancedWizardPageCollection.cs" />
+		<EmbeddedResource Include="Resources\AdvancedWizard.bmp" />
+		<EmbeddedResource Include="Resources\wiz.gif" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Reference Include="System.Design" />

@@ -96,11 +96,13 @@ namespace AdvancedWizardControl.Wizard
 
         [Category("Wizard")]
         [Description("Allows user to control the wizard through the Escape and Enter keys.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool ProcessKeys { get; set; }
 
         [Category("Behavior")]
         [Browsable(true)]
         [Description("Set the style of all the wizard buttons.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public FlatStyle FlatStyle
         {
             get => _btnCancel.FlatStyle;
@@ -117,6 +119,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Description("Alters the layout of the buttons.")]
         [RefreshProperties(RefreshProperties.Repaint)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public ButtonLayoutKind ButtonLayout
         {
             get => _buttonLayoutKind;
@@ -159,6 +162,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Browsable(true)]
         [Description("Show or hide the butons. You can still access the pages programmatically if you hide them.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool ButtonsVisible
         {
             get => _buttonsVisible;
@@ -167,6 +171,7 @@ namespace AdvancedWizardControl.Wizard
 
         [Description("Shows or hides the Cancel button")]
         [Category("Wizard")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool CancelButton
         {
             get => _btnCancel.Visible;
@@ -176,6 +181,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Browsable(true)]
         [Description("Increase the button size for easier use on a touchscreen")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool TouchScreen
         {
             get => _touchScreen;
@@ -190,6 +196,7 @@ namespace AdvancedWizardControl.Wizard
         /// </summary>
         [Category("Wizard")]
         [Description("Allows a choice of a dedicated button to complete the wizard steps or to use the Next button.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool FinishButton
         {
             get => _finishButton;
@@ -206,6 +213,7 @@ namespace AdvancedWizardControl.Wizard
 
         [Category("Wizard")]
         [Description("Allows a choice of a dedicated button to complete the wizard steps or to use the Next button.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool HelpButton
         {
             get => _helpButton;
@@ -259,6 +267,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Description("Customise the text of the Cancel button.")]
         [Localizable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string HelpButtonText
         {
             get => _btnHelp.Text;
@@ -272,6 +281,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Description("Customise the text of the Cancel button.")]
         [Localizable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string CancelButtonText
         {
             get => _btnCancel.Text;
@@ -285,6 +295,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Description("Customise the text of the Finish button.")]
         [Localizable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string FinishButtonText
         {
             get => _btnFinish.Text;
@@ -298,6 +309,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Description("Customise the text of the Back button.")]
         [Localizable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string BackButtonText
         {
             get => _btnBack.Text;
@@ -311,6 +323,7 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [Description("Customise the text of the Next button.")]
         [Localizable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string NextButtonText
         {
             get => _btnNext.Text;
@@ -326,6 +339,7 @@ namespace AdvancedWizardControl.Wizard
         [Description("Indicates whether the control is enabled.")]
         [Localizable(true)]
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool BackButtonEnabled
         {
             get => _btnBack.Enabled;
@@ -340,6 +354,7 @@ namespace AdvancedWizardControl.Wizard
         [Description("Indicates whether the control is enabled.")]
         [Localizable(true)]
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool NextButtonEnabled
         {
             get => NextButtonEnabledState;
@@ -360,6 +375,7 @@ namespace AdvancedWizardControl.Wizard
         [Description("Indicates whether the control is enabled.")]
         [Localizable(true)]
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool FinishButtonEnabled
         {
             get { return _finishButton ? _btnFinish.Enabled : _btnNext.Enabled; }
@@ -378,6 +394,7 @@ namespace AdvancedWizardControl.Wizard
         }
 
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool CurrentPageIsFinishPage
         {
             get => _pageSetAsFinishPage && _lastPage == CurrentPage;
