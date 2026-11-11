@@ -17,7 +17,9 @@ namespace AdvancedWizardControl.Wizard
     [DefaultProperty("Pages")]
     [DefaultEvent("Finish")]
     [ToolboxBitmap(typeof (Bitmap))]
-    [Designer(typeof (AdvancedWizardDesigner))]
+#if NETFRAMEWORK
+[Designer(typeof(AdvancedWizardDesigner))]
+#endif
     public partial class AdvancedWizard : UserControl, IMessageFilter
     {
         public AdvancedWizard()
@@ -88,7 +90,9 @@ namespace AdvancedWizardControl.Wizard
         [Category("Wizard")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         [Description("Add pages to the wizard.")]
-        [Editor(typeof(AdvancedWizardCollectionEditor), typeof(UITypeEditor))]
+#if NETFRAMEWORK
+[Editor(typeof(AdvancedWizardCollectionEditor), typeof(UITypeEditor))]
+#endif
         public AdvancedWizardPageCollection WizardPages { get; }
 
         [Browsable(false)]

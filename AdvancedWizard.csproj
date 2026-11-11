@@ -17,7 +17,14 @@
 		<EmbeddedResource Include="Resources\AdvancedWizard.bmp" />
 		<EmbeddedResource Include="Resources\wiz.gif" />
 	</ItemGroup>
-	<ItemGroup>
-	  <Reference Include="System.Design" />
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+		<Reference Include="System.Design" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0-windows'">
+		<Compile Remove="Wizard\AdvancedWizardDesigner.cs" />
+		<Compile Remove="Wizard\AdvancedWizardPageDesigner.cs" />
+		<Compile Remove="Wizard\AdvancedWizardCollectionEditor.cs" />
 	</ItemGroup>
 </Project>

@@ -11,7 +11,9 @@ namespace AdvancedWizardControl.WizardPages
     /// <summary>
     /// Gives us a header as seen in most wizards
     /// </summary>
+#if NETFRAMEWORK
     [Designer(typeof (AdvancedWizardPageDesigner))]
+#endif
     [ToolboxItem(false)]
     public class AdvancedWizardPage : Panel
     {
